@@ -66,20 +66,4 @@ export class HomePage {
       })
     })
   }
-
-  getTrustedUrl(url) {
-    console.log(url)
-    return (url)
-
-    //sanitizer.bypassSecurityTrustResourceUrl('https://api.lookr.com/embed/player/1508883064/day')
-  }
-  getItems(ev) {
-    let val = ev.target.value;
-    if (val && val.trim() != '') {
-      this.items = this.cities.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    }
-  }
-
 }
