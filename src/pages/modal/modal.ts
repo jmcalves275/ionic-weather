@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class ModalPage {
 
-  cities = ['Lisbon', 'London', 'Barcelona'];
+  cities = ['Lisbon', 'London', 'Barcelona', 'Paris'];
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
