@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>
+      Select city
+    </ion-title>
+
+    <ion-buttons icon-start>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list text-center>
+  <button ion-item *ngFor="let city of cities" (click)="itemSelected(city)">
+    {{ city }}
+  </button>
+</ion-list>
+</ion-content>

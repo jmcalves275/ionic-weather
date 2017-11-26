@@ -1,13 +1,36 @@
+<ion-header>
 
+  <ion-navbar>
+
+    <ion-title>
+      {{city}}
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
 
 <ion-content padding>
-  <h2 text-center>Lisboa</h2>
-  <p text-center>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <br>
+  <h3 text-center>{{city}}</h3>
+  <h6 text-center>
+    {{temperature}}
+  </h6>
+  <h6 text-center>
+    {{description}}
+  </h6>
+  <hr>
+
+  <ion-grid>
+    <ion-row center>
+      <ion-col>
+        <embed *ngIf="showCam" [src]="camera | safe">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
